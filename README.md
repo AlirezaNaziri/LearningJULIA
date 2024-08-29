@@ -82,4 +82,18 @@ pkg> instantiate
 ```
 
 
+to Call Python lib in Julia
+```
+using Pkg
+Pkg.add("PyCall")
+```
+
+```
+using PyCall
+np =pyimport("numpy")
+```
+
+arr = np.array([1, 2, 3])
+println(arr)
+
 
