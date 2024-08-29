@@ -1,0 +1,16 @@
+{
+    "name": "Julia DevContainer",
+    // "image": "julia:1.9", // Replace with the specific Julia version you want
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "julialang.language-julia",
+        "ms-azuretools.vscode-docker"
+    ],
+    "postCreateCommand": "julia -e 'using Pkg; Pkg.instantiate()'"
+}
+
