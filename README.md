@@ -44,3 +44,42 @@ RUN julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.add("Plots");'
 EXPOSE 8888
 
 ```
+
+
+## Package Mode
+In Julia, entering ] in the REPL (Read-Eval-Print Loop) switches you to the package management mode, indicated by the pkg> prompt;
+tasks such as adding, updating, removing, and checking the status of packages. 
+
+To exit from Pkg mode, simply need to press the backspace.
+
+Activate a Project Environment:
+```
+pkg> activate .
+```
+
+Add a Package:
+```
+pkg> add Polynomials
+```
+Remove a Package:
+```
+pkg> rm Polynomials
+```
+
+Update Packages
+```
+pkg> update
+```
+
+Check Status:
+```
+pkg> status
+```
+
+Instantiate the Environment:
+```
+pkg> instantiate
+```
+
+
+
